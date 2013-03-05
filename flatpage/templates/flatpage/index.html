@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 2.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Juri Lelli's personal website" />
+	<meta name="keywords" content="embedded systems, real time, scheduling, operating systems, linux, power efficiency" />
+	<meta name="author" content="Juri Lelli" />
+	<link rel="stylesheet" type="text/css" href="{% static "basic-profile.css" %}" title="Basic Profile" media="all" />
+	<title>{% block title %}Juri Lelli's{% endblock %}</title>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="sidebar">
+            {% block sidebar %}         
+		<a href="{% url 'home' %}"><img src="{% static "images/my_photo.png"%}" width="299" height="224" alt="That's me!" /></a>
+		<h1><a href="{% url 'home' %}">Juri Lelli</a></h1>
+		<p class="slogan">PhD Student in Embedded Systems</p>
+		
+		<ul>
+			<li><a href="{% url 'home' %}">About</a><br />The front page...</li>
+			<li><a href="#">Publications</a><br />Publish or Perish!</li>
+			<li><a href="#">Software</a><br />All the software projects...</li>
+			<li><a href="/pages/contact/">Contact</a><br />Don't hesitate to get in touch!</li>
+		</ul>
+            {% endblock %}         
+	</div>
+
+	<div id="content">
+            {% block content%}
+                <h2>{{ title|safe }}</h2>
+                <p>{{ content|safe }}</p>
+
+		<p class="credits">&copy; 2013 Juri Lelli - Last modified on: {{ last_modified }}<br />
+		Template design by <a href="http://andreasviklund.com/">Andreas Viklund</a>
+                / Powered by <a href="https://www.djangoproject.com/" title="Django">Django</a></p>
+            {% endblock %}
+	</div>
+</div>
+</body>
+</html>
