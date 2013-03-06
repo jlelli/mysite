@@ -14,7 +14,7 @@
 <div id="wrap">
 	<div id="sidebar">
             {% block sidebar %}         
-		<a href="{% url 'home' %}"><img src="{% static "images/my_photo.png"%}" width="299" height="224" alt="That's me!" /></a>
+		<a href="{% url 'home' %}"><img src="{% static "images/"%}{{ image }}" width="299" height="224" alt="That's me!" /></a>
 		<h1><a href="{% url 'home' %}">Juri Lelli</a></h1>
 		<p class="slogan">PhD Student in Embedded Systems</p>
 		

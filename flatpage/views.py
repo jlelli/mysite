@@ -10,5 +10,6 @@ def index(request, url):
 
     return render(request, 'flatpage/index.html',
         {'title': page.title,
+         'image': page.image,
          'content': page.content,
          'last_modified': page.last_modified})
