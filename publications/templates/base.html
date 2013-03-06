@@ -14,7 +14,7 @@
 <div id="wrap">
 	<div id="sidebar">
             {% block sidebar %}         
-		<img src="{% static "images/my_photo.png"%}" width="299" height="224" alt="That's me!" />
+		<img src="{% static "images/scientific-papers-round.jpg" %}" width="299" height="224" alt="That's me!" />
 		<h1><a href="{% url 'home' %}">Juri Lelli</a></h1>
 		<p class="slogan">PhD Student in Embedded Systems</p>
 		
@@ -28,14 +28,13 @@
 	</div>
 
 	<div id="content">
+            <h2>Publications</h2>
             {% block content%}
-                <h2>{{ title|safe }}</h2>
-                {{ content|safe }}
-
-		<p class="credits">&copy; 2013 Juri Lelli<br />
-		Template design by <a href="http://andreasviklund.com/">Andreas Viklund</a>
-                / Powered by <a href="https://www.djangoproject.com/" title="Django">Django</a></p>
             {% endblock %}
+            <p class="credits">&copy; 2013 Juri Lelli - Publications app adapted from: 
+            <a href="https://github.com/lucastheis/django-publications" target="_blank">django-publications</a><br />
+            Template design by <a href="http://andreasviklund.com/">Andreas Viklund</a>
+            / Powered by <a href="https://www.djangoproject.com/" title="Django">Django</a></p>
 	</div>
 </div>
 </body>

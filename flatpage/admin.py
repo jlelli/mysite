@@ -7,7 +7,7 @@ class PageAdmin(admin.ModelAdmin):
     fieldset = [
         (None,               {'fields': ['title']}),
         (None,               {'fields': ['image']}),
-        (None,               {'fields': ['content']}),
+        (None,               {'fields': ['content_markdown']}),
         ('Date information', {'fields': ['last_modified']}),
     ]
 

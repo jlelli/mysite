@@ -14,13 +14,13 @@
 <div id="wrap">
 	<div id="sidebar">
             {% block sidebar %}         
-		<a href="{% url 'home' %}"><img src="{% static "images/"%}{{ image }}" width="299" height="224" alt="That's me!" /></a>
+		<img src="{% static "images/"%}{{ image }}" width="299" height="224" alt="That's me!" />
 		<h1><a href="{% url 'home' %}">Juri Lelli</a></h1>
 		<p class="slogan">PhD Student in Embedded Systems</p>
 		
 		<ul>
 			<li><a href="{% url 'home' %}">About</a><br />The front page...</li>
-			<li><a href="#">Publications</a><br />Publish or Perish!</li>
+			<li><a href="/publications/">Publications</a><br />Publish or Perish!</li>
 			<li><a href="/pages/software/">Software</a><br />All the software projects...</li>
 			<li><a href="/pages/contact/">Contact</a><br />Don't hesitate to get in touch!</li>
 		</ul>
